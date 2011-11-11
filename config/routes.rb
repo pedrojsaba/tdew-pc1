@@ -1,4 +1,6 @@
 TdewPc1::Application.routes.draw do
+  resources :tags
+
   resources :book_marks
 
   # The priority is based upon order of creation:
