@@ -1,0 +1,27 @@
+<h1>Listing book_marks</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Link</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @book_marks.each do |book_mark| %>
+  <tr>
+    <td><%= book_mark.title %></td>
+    <td><%= book_mark.link %></td>
+    <td><%= book_mark.description %></td>
+    <td><%= link_to 'Show', book_mark %></td>
+    <td><%= link_to 'Edit', edit_book_mark_path(book_mark) %></td>
+    <td><%= link_to 'Destroy', book_mark, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Book mark', new_book_mark_path %>
